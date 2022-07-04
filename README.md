@@ -7,6 +7,10 @@
 ### 1.Left rotation
 A left rotation operation on an array of size  shifts each of the array's elements  unit to the left. Given an integer, , rotate the array that many steps left and return the result.
 
+### 2.Sparse Arrays
+
+There is a collection of input strings and a collection of query strings. For each query string, determine how many times it occurs in the list of input strings. Return an array of the results.
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
