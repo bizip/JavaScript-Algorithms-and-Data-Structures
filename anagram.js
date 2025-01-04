@@ -1,27 +1,22 @@
-// Write a function called same, which acept two arrays, the function should return true 
-// if every value in the array has its corresponding value squared in the second array.
-//  The flequency of the value must be the same
-
-const same = (arr1, arr2)=>{
-// if arr2 != arr2 return false
-// loop through arr1 
-// if arr2.include arr1*2 return true
-// else return false
-if(arr1.length !== arr2.length) return false;
-for(let i=0; i <= arr2.length; i++){
-    if(!arr2.includes(Math.pow((arr1[i]),2))){
-        return true;
+const anagram = (str1, str2) => {
+    if (str1.length !== str2.length) return false;
+    const frequencyCounter1 = {};
+    const frequencyCounter2 = {};
+    for(let val of str1){
+        frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
     }
-    return false;
+
+    for(let val of str2){
+        frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
+    }
+
+    for(let val in frequencyCounter1){
+        if(!(frequencyCounter1[val] === frequencyCounter2[val])){
+            return false;
+        }
+    }
+    console.log(true);
+    return true;
 }
 
-}
-
-// Examples
-//  console.log(same([1,2,3],[4,1,9])); true
-//  console.log(same([1,2,3],[1,9])); false
- console.log(same([1,2,1],[4,4,1])); 
-
-
-
-
+anagram("cinemp", "iceman")
